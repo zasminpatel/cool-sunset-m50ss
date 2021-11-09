@@ -163,7 +163,7 @@ const Header: FC<AppBarProps> = () => {
 
   return (
     <>
-      <AppBar position="fixed" open={isAppSidebarOpen} color="error">
+      <AppBar position="fixed" open={isAppSidebarOpen} color="warning">
         <Toolbar>
           <IconButton
             color="inherit"

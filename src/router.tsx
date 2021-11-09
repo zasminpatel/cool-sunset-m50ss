@@ -4,10 +4,6 @@ import FrontLayout from "./layouts/front";
 import AdminLayout from "./layouts/admin";
 import AppLayout from "./layouts/app";
 import Authenticated from "./components/Authenticated";
-// import HomePage from "./pages/front/Home";
-// import AboutUsPage from "./pages/front/AboutUs";
-
-// import DashboardPage from "./pages/admin/Dashboard";
 import SuspenseLoader from "./components/SuspenseLoader";
 
 const Loader = (Component) => (props) => (

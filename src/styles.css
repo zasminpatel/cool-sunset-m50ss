@@ -13,9 +13,13 @@ body {
 
 #nprogress .bar {
   background: #dc3545 !important;
+  z-index: 9999 !important;
 }
 
 /* Fancy blur effect */
 #nprogress .peg {
   box-shadow: 0 0 10px #dc3545, 0 0 5px #dc3545 !important;
+}
+#nprogress .spinner {
+  z-index: 9999 !important;
 }

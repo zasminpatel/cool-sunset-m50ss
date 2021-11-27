@@ -8,7 +8,7 @@ export default function SuspenseLoader() {
     NProgress.start();
 
     return () => {
-      // NProgress.done();
+      NProgress.done();
     };
   }, []);
 

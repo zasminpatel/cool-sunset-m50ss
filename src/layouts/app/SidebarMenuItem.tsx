@@ -35,14 +35,22 @@ export type SidebarMenuItemProps = AppMenuItemPropsWithoutItems & {
 };
 
 const SidebarMenuItem: React.FC<SidebarMenuItemProps> = (props) => {
+  const location = useLocation();
   const { name, link, Icon, items = [] } = props;
   const isExpandable = items && items.length > 0;
   const [open, setOpen] = React.useState(false);
   function handleClick() {
     setOpen(!open);
   }
+
   const MenuItemRoot = (
-    <ListItem button onClick={handleClick} to={link ?? "#"} component={NavLink}>
+    <ListItem
+      button
+      onClick={handleClick}
+      to={link ?? "#"}
+      component={NavLink}
+      selected={link === location.pathname}
+    >
       {/* Display an icon if any */}
       {!!Icon && (
         <ListItemIcon>

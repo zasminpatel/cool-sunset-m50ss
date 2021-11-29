@@ -14,7 +14,6 @@ const Loader = (Component) => (props) => (
 const LoginPage = Loader(lazy(() => import("./pages/auth/Login")));
 const RegisterPage = Loader(lazy(() => import("./pages/auth/Register")));
 
-
 const HomePage = Loader(lazy(() => import("./pages/front/Home")));
 const AboutUsPage = Loader(lazy(() => import("./pages/front/AboutUs")));
 // const HomePage = Loader(

@@ -42,6 +42,9 @@ const StatusAdmin404Page = Loader(
 const DashboardPage = Loader(lazy(() => import("./pages/admin/Dashboard")));
 const SettingPage = Loader(lazy(() => import("./pages/admin/Setting")));
 const ProfilePage = Loader(lazy(() => import("./pages/admin/Profile")));
+const UsersPage = Loader(lazy(() => import("./pages/admin/Users/Users")));
+const UserPage = Loader(lazy(() => import("./pages/admin/Users/User")));
+
 const routes = [
   {
     path: "app",
@@ -66,6 +69,18 @@ const routes = [
       {
         path: "profile",
         element: <ProfilePage />
+      },
+      {
+        path: "users",
+        element: <UsersPage />
+      },
+      {
+        path: "users/add",
+        element: <UserPage />
+      },
+      {
+        path: "users/edit/:id",
+        element: <UserPage />
       },
       {
         path: "404",

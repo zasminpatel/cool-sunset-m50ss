@@ -1,2 +1,17 @@
 https://github.com/piotrwitek/react-redux-typescript-guide#--stateless-counter
 
+
+https://jasonwatmore.com/post/2020/10/09/react-crud-example-with-react-hook-form
+
+
+API
+/users 		Get		Get All 
+/users/1	Get		Get Single
+/users		Post	Insert new
+/users/1	Put		Update
+/users/1	Delete	Delete
+
+WEB
+/users			All
+/users/add		Add
+/users/edit/1	Edit

@@ -163,7 +163,7 @@ const Header: FC<AppBarProps> = () => {
 
   return (
     <>
-      <AppBar position="fixed" open={isAppSidebarOpen} color="warning">
+      <AppBar position="fixed" open={isAppSidebarOpen} color="default">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -187,7 +187,7 @@ const Header: FC<AppBarProps> = () => {
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={4} color="success">
+              <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
@@ -196,7 +196,7 @@ const Header: FC<AppBarProps> = () => {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="success">
+              <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

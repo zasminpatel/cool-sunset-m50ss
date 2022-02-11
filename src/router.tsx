@@ -5,7 +5,8 @@ import AdminLayout from "./layouts/admin";
 import AppLayout from "./layouts/app";
 import Authenticated from "./components/Authenticated";
 import SuspenseLoader from "./components/SuspenseLoader";
-
+// https://stackblitz.com/edit/react-role-based-authorization-example?file=_components%2FPrivateRoute.js
+// above link for role based url examples.
 const Loader = (Component) => (props) => (
   <Suspense fallback={<SuspenseLoader />}>
     <Component {...props} />
@@ -16,6 +17,9 @@ const RegisterPage = Loader(lazy(() => import("./pages/auth/Register")));
 
 const HomePage = Loader(lazy(() => import("./pages/front/Home")));
 const AboutUsPage = Loader(lazy(() => import("./pages/front/AboutUs")));
+const CustomeTablePage = Loader(
+  lazy(() => import("./pages/front/CustomeTable"))
+);
 // const HomePage = Loader(
 //   lazy(() => {
 //     return new Promise((resolve) => {
@@ -44,6 +48,9 @@ const SettingPage = Loader(lazy(() => import("./pages/admin/Setting")));
 const ProfilePage = Loader(lazy(() => import("./pages/admin/Profile")));
 const UsersPage = Loader(lazy(() => import("./pages/admin/Users/Users")));
 const UserPage = Loader(lazy(() => import("./pages/admin/Users/User")));
+
+//const BlogsPage = Loader(lazy(() => import("./pages/admin/Users/User")));
+const BlogPage = Loader(lazy(() => import("./pages/admin/Blogs/Blog")));
 
 const routes = [
   {
@@ -81,6 +88,14 @@ const routes = [
       {
         path: "users/edit/:id",
         element: <UserPage />
+      },
+      // {
+      //   path: "blogs",
+      //   element: <BlogsPage />
+      // },
+      {
+        path: "blog",
+        element: <BlogPage />
       },
       {
         path: "404",
@@ -137,6 +152,10 @@ const routes = [
       {
         path: "about",
         element: <AboutUsPage />
+      },
+      {
+        path: "table",
+        element: <CustomeTablePage />
       },
       {
         path: "404",

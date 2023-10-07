@@ -22,13 +22,13 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import PropTypes from "prop-types";
 // React runtime PropTypes
-export const AppMenuItemPropTypes = {
+export const AppMenuItemPropType = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string,
   Icon: PropTypes.elementType,
   items: PropTypes.array
 };
-type AppMenuItemPropTypes = PropTypes.InferProps<typeof AppMenuItemPropTypes>;
+type AppMenuItemPropTypes = PropTypes.InferProps<typeof AppMenuItemPropType>;
 type AppMenuItemPropsWithoutItems = Omit<AppMenuItemPropTypes, "items">;
 export type SidebarMenuItemProps = AppMenuItemPropsWithoutItems & {
   items?: SidebarMenuItemProps[];
